@@ -5,10 +5,11 @@ const ImageCard = ({ image }) => {
 
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img src={image.webformatURL} alt="Img" className="w-full" />
+      <img src={image.webformatURL} alt="Img" className="w-full h-64" />
       <div className="px-6 py-4">
-        <div className="font-bold text-purple-500 text-xl mb-2">
+        <div className="font-bold text-purple-500 text-xl mb-2 flex justify-between">
           Photo by {image.user}
+          <a href={image.largeImageURL} download className="p-2 bg-gray-200 text-gray-700 rounded shadow">Download</a>
         </div>
         <ul>
           <li>
